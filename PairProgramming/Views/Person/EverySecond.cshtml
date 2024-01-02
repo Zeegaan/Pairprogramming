@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Person>
+
+@{
+    Layout = null;
+}
+
+@foreach (var person in Model)
+{
+    <h1>@person.FirstName</h1>
+    <h1>@person.LastName</h1>
+    <h1>@person.Email</h1>
+    <h1>@person.Birthday</h1>
+}

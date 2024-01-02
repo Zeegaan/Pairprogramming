@@ -1,0 +1,28 @@
+﻿@model Person
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@Model.FirstName</h1>
+<h1>@Model.LastName</h1>
+<h1>@Model.Email</h1>
+<h1>@Model.Birthday</h1>
+
+
+@using (Html.BeginForm("Create", "Person", FormMethod.Post))
+{
+    <label>First Name</label>
+    <input type="text" name="FirstName" />
+    
+    <label>Last Name</label>
+    <input type="text" name="LastName"/>
+    
+    <label>Email</label>
+    <input type="text" name="Email"/>
+    
+    <label>Birthday</label>
+    <input type="datetime" name="Birthday"/>
+    
+    <button type="submit">Lav den din abekat</button>
+}
